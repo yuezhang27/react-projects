@@ -1,0 +1,61 @@
+.header {
+  font-size: 2rem;
+  width: 300px;
+  /* box居中 */
+  margin: 40px auto;
+  /* 显示盒子下border，为很宽的绿色 */
+  border-bottom: 10px solid green;
+  text-align: center;
+}
+
+img {
+  width: 90%;
+  height: auto;
+  display: block;
+}
+
+.card {
+  margin-bottom: 5%;
+}
+
+.cardprice {
+  position: relative;
+}
+
+.price {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: green;
+  font: #fff;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.int {
+  display: block;
+}
+
+.abbr {
+  display: inline-block;
+}
+
+.content .short {
+  display: block;
+}
+
+.content .full {
+  display: none;
+}
+
+.content.expand .short {
+  display: none;
+}
+
+.content.expand .full {
+  display: block;
+}
+
+.card.dislike {
+  display: none;
+}

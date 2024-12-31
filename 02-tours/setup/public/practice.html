@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- HTML结构 -->
+    <div id="test-div">
+      <div class="c-red">
+        <p id="test-p">JavaScript</p>
+        <p>Java</p>
+      </div>
+      <div class="c-red c-green">
+        <p>Python</p>
+        <p>Ruby</p>
+        <p>Swift</p>
+      </div>
+      <div class="c-green">
+        <p>Scheme</p>
+        <p>Haskell</p>
+      </div>
+    </div>
+    <script>
+      // 选择<p>JavaScript</p>:
+      let js = document.getElementById("test-p");
+
+      // 选择<p>Python</p>,<p>Ruby</p>,<p>Swift</p>:
+      let arr = document.getElementsByClassName("c-red c-green").children;
+
+      // 选择<p>Haskell</p>:
+      let haskell = document.getElementsByClassName("c-green").lastElementChild;
+
+      // 测试:
+      if (!js || js.innerText !== "JavaScript") {
+        console.log(js);
+        alert("选择JavaScript失败!");
+      } else if (
+        !arr ||
+        arr.length !== 3 ||
+        !arr[0] ||
+        !arr[1] ||
+        !arr[2] ||
+        arr[0].innerText !== "Python" ||
+        arr[1].innerText !== "Ruby" ||
+        arr[2].innerText !== "Swift"
+      ) {
+        console.log("选择Python,Ruby,Swift失败!");
+      } else if (!haskell || haskell.innerText !== "Haskell") {
+        console.log("选择Haskell失败!");
+      } else {
+        console.log("测试通过!");
+      }
+    </script>
+  </body>
+</html>
